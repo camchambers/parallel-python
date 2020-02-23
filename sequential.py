@@ -16,7 +16,7 @@ data = numberArray.tolist()
 
 # A function that counts how many elements fall between a range of values
 # given a one-dimensional array
-def range_count(row, minimum=2, maximum=5):
+def range_count(row, minimum, maximum):
     count = 0
     for n in row:
         if minimum <= n <= maximum:
