@@ -1,5 +1,7 @@
-# A simple program demonstrating a parallel python program which determines
-# how many numbers fall within a user-specified range
+# A simple program that iterates through a two-dimensional array and determines how
+# many values within each row fall within a user-defined range.
+# This example serves as a baseline for demonstrating the speedup 
+# of a a parallel version.
 
 import numpy as np
 import time
@@ -7,7 +9,8 @@ import time
 # Initialize random number generator with a seed value
 np.random.RandomState(999)
 
-# Generate an array of random number between 0 and 10
+# Generate a two-dimensional 10,000 x 10,000 array of random
+# numbers falling between 0 and 10
 numberArray = np.random.randint(0, 10, size=[10000, 10000])
 data = numberArray.tolist()
 
