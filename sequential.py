@@ -6,14 +6,6 @@
 import numpy as np
 import time
 
-# Initialize random number generator with a seed value
-np.random.RandomState(999)
-
-# Generate a two-dimensional 10,000 x 10,000 array of random
-# numbers falling between 0 and 10
-numberArray = np.random.randint(0, 10, size=[10000, 10000])
-data = numberArray.tolist()
-
 # A function that counts how many elements fall between a range of values
 # given a one-dimensional array
 def range_count(row, minimum, maximum):
@@ -22,6 +14,16 @@ def range_count(row, minimum, maximum):
         if minimum <= n <= maximum:
             count = count + 1
     return count
+
+# Initialize random number generator with a seed value
+np.random.RandomState(999)
+
+# Generate a two-dimensional 10,000 x 10,000 array of random
+# numbers falling between 0 and 10
+numberArray = np.random.randint(0, 10, size=[10000, 10000])
+data = numberArray.tolist()
+
+
 
 # An array to store how many values fall between each record in our array
 # of values
