@@ -41,6 +41,3 @@ for row in data:
 totalTime = time.time() - startTime
 
 print("Sequential execution completed in %s seconds." % (totalTime))
-
-# Print results from the first 5 rows
-print(results[:5])

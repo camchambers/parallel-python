@@ -1,10 +1,13 @@
-# A simple program demonstrating a parallel python program which determines
-# how many numbers fall within a user-specified range
+# A simple program that iterates through a two-dimensional array and determines how
+# many values within each row fall within a user-defined range.
+# This example is a parallel version of the sequential.py program.
 
 import numpy as np
 import time
 import multiprocessing as mp
 
+# A function that counts how many elements fall between a range of values
+# given a one-dimensional array
 def range_count(row, minimum=2, maximum=5):
     count = 0
     for n in row:
