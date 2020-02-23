@@ -23,8 +23,6 @@ np.random.RandomState(999)
 numberArray = np.random.randint(0, 10, size=[10000, 10000])
 data = numberArray.tolist()
 
-
-
 # An array to store how many values fall between each record in our array
 # of values
 results = []
@@ -32,8 +30,9 @@ results = []
 # Track the start time of the program
 startTime = time.time()
 
-# Iterate through each row in the 2D array of values and determine how many times
-# each of the values fall between our range of specified values
+# Iterate through each row in the two-dimensional array of results 
+# and determine how many times each of the values fall between
+# the user-defined range of values
 for row in data:
     results.append(range_count(row, minimum=2, maximum=5))
 
