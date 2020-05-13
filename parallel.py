@@ -22,7 +22,7 @@ print("Using {} CPU(s)".format(mp.cpu_count()))
 np.random.RandomState(999)
 
 # Generate an array of random number between 0 and 10
-numberArray = np.random.randint(0, 10, size=[10000, 10000])
+numberArray = np.random.randint(0, 10, size=[15000, 15000])
 data = numberArray.tolist()
 
 # Track the start time of the program
