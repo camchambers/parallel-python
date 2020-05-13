@@ -1,6 +1,19 @@
 # Parallel Python
 > A simple demonstration of a parallel program in python
 
+## Example
+```
+$ python3 sequential.py
+
+Using 1 CPU(s)
+Parallel execution completed in 32.23907995223999 seconds.
+
+$ python3 parallel.py
+Using 4 CPU(s)
+Parallel execution completed in 16.227980613708496 seconds.
+
+```
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
