@@ -10,7 +10,7 @@ Parallel execution completed in 32.23907995223999 seconds.
 
 $ python3 parallel.py
 Using 4 CPU(s)
-Parallel execution completed in 8.100968837738037 seconds.
+Parallel execution completed in 16.227980613708496 seconds.
 
 ```
 
