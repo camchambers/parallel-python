@@ -5,6 +5,7 @@
 import numpy as np
 import time
 import multiprocessing as mp
+import argparse
 
 # A function that counts how many elements fall between a range of values
 # given a one-dimensional array
@@ -15,8 +16,14 @@ def range_count(row, minimum=2, maximum=5):
             count = count + 1
     return count
 
-# Number of CPUs available
-cpuCount = mp.cpu_count()
+# Parse program arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--cpus', nargs='?', const=mp.cpu_count(), type=int)
+args = parser.parse_args()
+
+
+# Number of CPUs to use based on cpu argument (defaults to available CPUs)
+cpuCount = mp.cpu_count() if args.cpus == None else args.cpus
 
 # Display the number of processors used for processing
 print("Using {} CPU(s)".format(cpuCount))
@@ -32,7 +39,7 @@ data = numberArray.tolist()
 startTime = time.time()
 
 # Create a pool of processors
-pool = mp.Pool(mp.cpu_count())
+pool = mp.Pool(cpuCount)
 
 results = pool.map(range_count, [row for row in data])
 
