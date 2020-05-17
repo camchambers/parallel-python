@@ -15,8 +15,11 @@ def range_count(row, minimum=2, maximum=5):
             count = count + 1
     return count
 
-# Display the number of processors available on the current machine
-print("Using {} CPU(s)".format(mp.cpu_count()))
+# Number of CPUs available
+cpuCount = mp.cpu_count()
+
+# Display the number of processors used for processing
+print("Using {} CPU(s)".format(cpuCount))
 
 # Initialize random number generator with a seed value
 np.random.RandomState(999)
