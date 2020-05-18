@@ -3,14 +3,21 @@
 
 ## Example
 ```
-$ python3 sequential.py
-
+$ python3 parallel.py --cpus 1
 Using 1 CPU(s)
-Parallel execution completed in 32.23907995223999 seconds.
+Parallel execution completed in 49.47831177711487 seconds.
 
-$ python3 parallel.py
+$ python3 parallel.py --cpus 2
+Using 2 CPU(s)
+Parallel execution completed in 32.50220012664795 seconds.
+
+$ python3 parallel.py --cpus 3
+Using 3 CPU(s)
+Parallel execution completed in 30.893962144851685 seconds.
+
+$ python3 parallel.py --cpus 4
 Using 4 CPU(s)
-Parallel execution completed in 16.227980613708496 seconds.
+Parallel execution completed in 28.359114170074463 seconds.
 
 ```
 
