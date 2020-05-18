@@ -5,6 +5,7 @@
 import numpy as np
 import time
 import multiprocessing as mp
+import argparse
 
 # A function that counts how many elements fall between a range of values
 # given a one-dimensional array

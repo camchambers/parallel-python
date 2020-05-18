@@ -21,9 +21,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--cpus', nargs='?', const=mp.cpu_count(), type=int)
 args = parser.parse_args()
 
-
 # Number of CPUs to use based on cpu argument (defaults to available CPUs)
 cpuCount = mp.cpu_count() if args.cpus == None else args.cpus
+
+# Default to the maximum number of cpus if argument is great than the number available
+cpuCount = mp.cpu_count() if cpuCount > mp.cpu_count() else cpuCount
 
 # Display the number of processors used for processing
 print("Using {} CPU(s)".format(cpuCount))
