@@ -1,5 +1,5 @@
 # Parallel Python
-> A simple demonstration of a parallel program in python
+> A simple demonstration of writing parallel code in python using the *multiprocessing* library. This solution utilizes a pool object to distribute a workload across processes (data parallelism).
 
 ## Example
 ```
