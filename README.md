@@ -1,6 +1,9 @@
 # Parallel Python
 > A simple demonstration of writing parallel code in python using the *multiprocessing* library. This solution utilizes a pool object to distribute a workload across processes (data parallelism).
 
+# Usage
+Running the program without any parameters will utilize the number of processes available. A specific number of processes can be specified using the --cpus argument followed by a numeric value. 
+
 ## Example
 ```
 $ python3 parallel.py --cpus 1
